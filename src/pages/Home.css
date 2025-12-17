@@ -142,56 +142,78 @@
 .tf3-team-cards {
   display: flex;
   flex-direction: row;
-  gap: 3.5rem;
+  gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 2.5rem;
 }
-.tf3-team-card {
-  background: rgba(24, 18, 48, 0.97);
+/* Flip Card Styles */
+.tf3-flip-card {
+  width: clamp(240px, 24vw, 300px);
+  height: clamp(320px, 32vw, 380px);
+  perspective: 1000px;
   border-radius: 2rem;
-  box-shadow: 0 4px 32px #a084e880;
-  padding: 3rem 2.5rem 2.5rem 2.5rem;
-  min-width: 300px;
-  max-width: 370px;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-  border: 2.5px solid #a084e850;
   cursor: pointer;
 }
-.tf3-team-card:hover {
-  box-shadow: 0 0 48px #a084e8cc, 0 0 0 3px #a084e8;
-  transform: scale(1.08);
+
+.tf3-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
 }
-.tf3-team-img-wrap {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+
+.tf3-flip-card:hover .tf3-flip-inner,
+.tf3-flip-card:focus-within .tf3-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.tf3-flip-front,
+.tf3-flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 2rem;
   overflow: hidden;
-  margin-bottom: 1.5rem;
-  border: 4px solid #a084e8;
-  box-shadow: 0 0 24px #a084e880;
+  box-shadow: 0 4px 32px #a084e880;
+  border: 2.5px solid #a084e850;
+  background: rgba(24, 18, 48, 0.97);
 }
-.tf3-team-img {
+
+.tf3-flip-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tf3-flip-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
+
+.tf3-flip-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .tf3-team-info {
-  margin-top: 0.8rem;
+  text-align: center;
 }
+
 .tf3-team-name {
-  font-size: 1.35rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   font-weight: 800;
   color: #fff;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
+
 .tf3-team-pos {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 700;
   margin-top: 0.2rem;
 }
@@ -202,8 +224,8 @@
     gap: 2rem;
     align-items: center;
   }
-  .tf3-team-card {
-    min-width: 180px;
+  .tf3-flip-card {
+    width: 90%;
     max-width: 320px;
   }
 }
@@ -397,7 +419,15 @@
   min-height: 100vh;
   overflow: hidden;
   padding-top: 64px;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%);
+  /* Blend page gradient with the global starfield for consistency */
+  background:
+    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
+    url('/images/backgrounds/starfield.png');
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 .partner-logos-top {
@@ -553,7 +583,6 @@
   height: 100%;
   object-fit: contain;
   animation: robotWalk 2s ease-in-out infinite;
-}
 }
 
 @keyframes robotWalk {

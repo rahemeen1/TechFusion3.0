@@ -10,6 +10,10 @@
   box-shadow: 0 10px 40px rgba(6, 182, 212, 0.1);
 }
 
+.navbar.scrolled {
+  box-shadow: 0 12px 50px rgba(6, 182, 212, 0.18);
+}
+
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -118,6 +122,14 @@
   width: 80%;
 }
 
+.nav-link.active {
+  color: #06b6d4;
+}
+
+.nav-link.active .nav-underline {
+  width: 100%;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -164,6 +176,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
   }
 
   .nav-container {

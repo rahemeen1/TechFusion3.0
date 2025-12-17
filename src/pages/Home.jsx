@@ -131,36 +131,41 @@ function Home() {
         <div className="tf3-team-cards">
           {[
             {
-              img: '/rahemeen-placeholder.jpg',
+              img: '/images/heads/rahemeen.jpg',
               name: 'Rahemeen Kamran',
               title: 'IEEE Chairperson',
             },
             {
-              img: '/alishba-placeholder.jpg',
+              img: '/images/heads/alishba.jpg',
               name: 'Alishba Malik',
               title: 'IEEE Chairperson',
             },
             {
-              img: '/faheela-placeholder.jpg',
+              img: '/images/heads/faheela.jpg',
               name: 'Faheela Farooq',
               title: 'CS Club President',
             },
           ].map((member, idx) => (
             <motion.div
-              className="tf3-team-card"
+              className="tf3-flip-card"
               key={member.name}
-              whileHover={{ scale: 1.07, boxShadow: '0 0 24px #a084e8' }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.15 }}
+              tabIndex={0}
+              aria-label={`${member.name}, ${member.title}`}
             >
-              <div className="tf3-team-img-wrap">
-                <img src={member.img} alt={member.name} className="tf3-team-img" />
-              </div>
-              <div className="tf3-team-info">
-                <div className="tf3-team-name">{member.name}</div>
-                <div className="tf3-team-pos tf3-purple">{member.title}</div>
+              <div className="tf3-flip-inner">
+                <div className="tf3-flip-front">
+                  <img src={member.img} alt={member.name} className="tf3-flip-img" />
+                </div>
+                <div className="tf3-flip-back">
+                  <div className="tf3-team-info">
+                    <div className="tf3-team-name">{member.name}</div>
+                    <div className="tf3-team-pos tf3-purple">{member.title}</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}

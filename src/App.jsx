@@ -4,8 +4,8 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Competitions from './pages/Competitions'
-import Team from './pages/Team'
 import Contact from './pages/Contact'
+import About from './pages/About'
 import './App.css'
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/competitions" element={<Competitions />} />
-            <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

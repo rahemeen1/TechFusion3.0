@@ -1,0 +1,67 @@
+.about-container {
+  min-height: 100vh;
+  padding: 96px 1.5rem 48px;
+  background:
+    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
+    url('/images/backgrounds/starfield.png');
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+.about-hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.about-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.about-title-tech { color: #ffffff; }
+.about-title-number {
+  background: linear-gradient(90deg, #48caff 0%, #b18fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-subtitle {
+  color: #cbd5e1;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+}
+
+.about-grid {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.about-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.1);
+}
+
+.about-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.about-card p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
