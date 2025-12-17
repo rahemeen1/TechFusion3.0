@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import techfusionBanner from '../assets/TechFusion Banner.png';
+import alishbaImg from '../assets/alishba.jpeg';
+import drghousiaImg from '../assets/drghousia.jpeg';
+import faheelaImg from '../assets/faheela.jpeg';
+import rahemeenImg from '../assets/rahemeen.jpeg';
+import drsidraImg from '../assets/drsidra.jpeg';
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -63,7 +68,6 @@ function Home() {
         <img
           src={techfusionBanner}
           alt="TechFusion 3.0 Banner"
-          className="tf3-hero-banner-img"
           style={{ width: '100%', height: 'auto', display: 'block', maxWidth: '100vw', objectFit: 'cover' }}
         />
       </div>
@@ -73,19 +77,29 @@ function Home() {
       <div className="tf3-letters-section">
         {[
           {
-            img: '/hod-placeholder.jpg',
+            img: drsidraImg,
             heading: 'Letter from HOD',
-            text: 'Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.',
+            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+
+TechFusion 3.0 is not just an event, but a celebration of the spirit of technology and learning. Over the years, our students and faculty have worked tirelessly to create a platform where creativity, critical thinking, and technical skills converge. This year, we are excited to present a diverse range of competitions, workshops, and networking opportunities that will challenge and inspire you.
+We believe that true innovation happens when passionate minds come together to solve real-world problems. TechFusion 3.0 is designed to foster collaboration, encourage experimentation, and ignite curiosity. Whether you are participating in a coding challenge, attending a workshop, or simply exploring the exhibits, we hope you find inspiration and motivation to push your boundaries.
+I extend my heartfelt gratitude to the organizing teams, our partners, and every participant for making this event possible. Let us continue to support each other, share knowledge, and build a vibrant tech community at Kinnaird College and beyond.
+Wishing you all a successful and memorable TechFusion 3.0!
+As we embark on this journey together, let us remember that every great achievement starts with a single idea and the courage to pursue it. TechFusion 3.0 is a testament to the power of vision, teamwork, and perseverance. I encourage each of you to take full advantage of the opportunities presented, to learn from one another, and to contribute your unique perspectives.
+
+Let this event be a source of inspiration and growth, not only for your technical skills but also for your personal and professional development. The friendships and connections you make here will last far beyond these two days. Embrace the challenges, celebrate your successes, and never stop striving for excellence.
+
+Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
           },
           {
-            img: '/advisor-cs-placeholder.jpg',
+            img: drghousiaImg,
             heading: 'Letter from CS Club Advisor',
-            text: 'TechFusion is a platform for students to shine and grow. We look forward to your participation and creativity!',
+            text: 'TechFusion is a platform for students to shine and grow. We look forward to your participation and creativity!'
           },
           {
-            img: '/advisor-ieee-placeholder.jpg',
+            img: faheelaImg,
             heading: 'Letter from IEEE Advisor',
-            text: 'Let’s make TechFusion 3.0 a memorable journey of learning, networking, and fun. Best wishes to all participants!',
+            text: 'Let’s make TechFusion 3.0 a memorable journey of learning, networking, and fun. Best wishes to all participants!'
           },
         ].map((card, idx) => (
           <motion.div
@@ -131,17 +145,17 @@ function Home() {
         <div className="tf3-team-cards">
           {[
             {
-              img: '/images/heads/rahemeen.jpg',
+              img: rahemeenImg,
               name: 'Rahemeen Kamran',
-              title: 'IEEE Chairperson',
+              title: 'IEEE WIE Chairperson',
             },
             {
-              img: '/images/heads/alishba.jpg',
+              img: alishbaImg,
               name: 'Alishba Malik',
               title: 'IEEE Chairperson',
             },
             {
-              img: '/images/heads/faheela.jpg',
+              img: faheelaImg,
               name: 'Faheela Farooq',
               title: 'CS Club President',
             },
