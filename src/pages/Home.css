@@ -1,3 +1,397 @@
+.tf3-letter-content-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+/* --- TechFusion 3.0 Hero Banner Section --- */
+.tf3-hero-banner-section {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 12;
+}
+.tf3-hero-banner-img {
+  width: 100vw;
+  max-width: 1600px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow: 0 8px 32px #a084e8cc;
+  margin-bottom: 0.5rem;
+  background: #1a1333;
+  display: block;
+}
+.tf3-hero-dates {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: -1.5rem;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.tf3-purple {
+  color: #a084e8;
+}
+
+/* --- Letters / Messages Section --- */
+.tf3-letters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 950px;
+  margin: 0 auto 3.5rem auto;
+  z-index: 13;
+}
+.tf3-letter-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: rgba(24, 18, 48, 0.97);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px #a084e850;
+  overflow: hidden;
+  min-height: 220px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1.5px solid #a084e830;
+}
+.tf3-letter-card:hover {
+  box-shadow: 0 8px 48px #a084e8cc, 0 0 0 2px #a084e8;
+  transform: translateY(-6px) scale(1.02);
+}
+.tf3-letter-img-wrap {
+  flex: 0 0 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1333;
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
+}
+.tf3-letter-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+.tf3-letter-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tf3-letter-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+.tf3-letter-text {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: #c7bfff;
+  text-align: left;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .tf3-letter-card {
+    flex-direction: column;
+    min-height: unset;
+    text-align: center;
+  }
+  .tf3-letter-img-wrap {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    height: 180px;
+  }
+  .tf3-letter-img {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .tf3-letter-content, .tf3-letter-content-centered {
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    align-items: center;
+  }
+  .tf3-letter-heading, .tf3-letter-text {
+    text-align: center;
+  }
+}
+
+/* --- Team Section --- */
+.tf3-team-section {
+  margin: 4rem auto 2rem auto;
+  max-width: 1100px;
+  text-align: center;
+  z-index: 14;
+}
+.tf3-team-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.04em;
+}
+
+.tf3-team-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.tf3-team-card {
+  background: rgba(24, 18, 48, 0.97);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px #a084e880;
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  min-width: 300px;
+  max-width: 370px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 2.5px solid #a084e850;
+  cursor: pointer;
+}
+.tf3-team-card:hover {
+  box-shadow: 0 0 48px #a084e8cc, 0 0 0 3px #a084e8;
+  transform: scale(1.08);
+}
+.tf3-team-img-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 4px solid #a084e8;
+  box-shadow: 0 0 24px #a084e880;
+}
+.tf3-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.tf3-team-info {
+  margin-top: 0.8rem;
+}
+.tf3-team-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+.tf3-team-pos {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  .tf3-team-cards {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .tf3-team-card {
+    min-width: 180px;
+    max-width: 320px;
+  }
+}
+/* --- TechFusion 2.0 Banner Section --- */
+.tf-banner-section {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 12;
+}
+.tf-banner-img {
+  width: 100vw;
+  max-width: 1600px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow: 0 8px 32px #a084e8cc;
+  margin-bottom: 0.5rem;
+}
+.tf-banner-dates {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.tf-purple {
+  color: #a084e8;
+}
+
+/* --- Message Cards Section --- */
+.tf-message-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto 3.5rem auto;
+  z-index: 13;
+}
+.tf-message-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(24, 18, 48, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px #a084e850;
+  overflow: hidden;
+  min-height: 220px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1.5px solid #a084e830;
+}
+.tf-message-card:hover {
+  box-shadow: 0 8px 48px #a084e8cc, 0 0 0 2px #a084e8;
+  transform: translateY(-6px) scale(1.02);
+}
+.tf-card-img-wrap {
+  flex: 0 0 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1333;
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
+}
+.tf-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+.tf-card-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  color: #e2e8f0;
+}
+.tf-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.tf-card-text {
+  font-size: 1.1rem;
+  color: #c7bfff;
+}
+
+@media (max-width: 900px) {
+  .tf-message-card {
+    flex-direction: column;
+    min-height: unset;
+    text-align: center;
+  }
+  .tf-card-img-wrap {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    height: 180px;
+  }
+  .tf-card-img {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .tf-card-content {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+/* --- Team Section --- */
+.tf-team-section {
+  margin: 4rem auto 2rem auto;
+  max-width: 1100px;
+  text-align: center;
+  z-index: 14;
+}
+.tf-team-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.04em;
+}
+.tf-team-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tf-team-card {
+  background: rgba(24, 18, 48, 0.97);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px #a084e850;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1.5px solid #a084e830;
+  cursor: pointer;
+}
+.tf-team-card:hover {
+  box-shadow: 0 0 32px #a084e8cc, 0 0 0 2px #a084e8;
+  transform: scale(1.07);
+}
+.tf-team-img-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+  border: 3px solid #a084e8;
+  box-shadow: 0 0 16px #a084e850;
+}
+.tf-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.tf-team-info {
+  margin-top: 0.5rem;
+}
+.tf-team-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+.tf-team-pos {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  .tf-team-cards {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .tf-team-card {
+    min-width: 180px;
+    max-width: 320px;
+  }
+}
 .home-container {
   position: relative;
   min-height: 100vh;

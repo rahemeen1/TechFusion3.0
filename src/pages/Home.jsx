@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import techfusionBanner from '../assets/TechFusion Banner.png';
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -57,144 +58,113 @@ function Home() {
         />
       ))}
 
-      {/* Animated Gradient Orbs */}
-      <motion.div
-        className="orb orb-purple"
-        animate={{
-          x: [0, 50, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
-      <motion.div
-        className="orb orb-cyan"
-        animate={{
-          x: [0, -50, 0],
-          y: [0, 50, 0],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
+      {/* SECTION 0: HERO BANNER */}
+      <div className="tf3-hero-banner-section">
+        <img
+          src={techfusionBanner}
+          alt="TechFusion 3.0 Banner"
+          className="tf3-hero-banner-img"
+          style={{ width: '100%', height: 'auto', display: 'block', maxWidth: '100vw', objectFit: 'cover' }}
+        />
+      </div>
+      <div className="tf3-hero-dates tf3-purple" style={{ textAlign: 'center', fontWeight: 700, fontSize: '2.2rem', margin: '1.5rem 0 2.2rem 0', letterSpacing: '0.05em' }}>21–22 January</div>
 
-      {/* Main Content */}
-      <div className="home-content">
-        <motion.div
-          className="content-wrapper"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Tagline */}
-          <motion.div variants={itemVariants} className="tagline">
-            <div className="tagline-badge">
-              <Sparkles size={16} className="badge-icon" />
-              <span>21st & 22nd January 2026</span>
-            </div>
-          </motion.div>
-
-          {/* Main Heading */}
-          <motion.h1 variants={itemVariants} className="main-heading">
-            <span className="heading-tech">TECH</span>
-            <span className="heading-fusion">FUSION</span>
-            <span className="heading-number">3.0</span>
-          </motion.h1>
-
-          {/* Tagline Text */}
-          <motion.p variants={itemVariants} className="tagline-text">
-            Beyond Innovation, Into Evolution
-          </motion.p>
-
-          {/* Subtitle */}
-          <motion.p variants={itemVariants} className="subtitle">
-            Experience cutting-edge technology, brilliant minds, and endless
-            possibilities at Kinnaird College for Women
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="cta-buttons">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link to="/competitions" className="btn btn-primary glow-cyan">
-                <span>Explore Competitions</span>
-                <ArrowRight size={20} />
-              </Link>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link to="/contact" className="btn btn-secondary">
-                <span>Get in Touch</span>
-                <ArrowRight size={20} />
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Event Info Cards */}
-          <motion.div variants={itemVariants} className="info-cards">
-            {[
-              {
-                icon: '🏆',
-                title: 'Competitions',
-                description: 'Exciting challenges across tech domains',
-              },
-              {
-                icon: '👥',
-                title: 'Network',
-                description: 'Connect with industry professionals',
-              },
-              {
-                icon: '🚀',
-                title: 'Innovation',
-                description: 'Showcase your amazing projects',
-              },
-            ].map((card, index) => (
-              <motion.div
-                key={index}
-                className="info-card glass-effect"
-                whileHover={{ y: -10 }}
-              >
-                <div className="card-icon">{card.icon}</div>
-                <h3 className="card-title">{card.title}</h3>
-                <p className="card-description">{card.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Logos Row - Bottom of Page */}
-          <motion.div variants={itemVariants} className="logos-row logos-bottom">
-            <div className="logo-item-small">IEEE</div>
-            <div className="logo-item-small">WIE</div>
-            <div className="logo-item-small">KCW</div>
-            <div className="logo-item-small">KCCS</div>
-          </motion.div>
-
-          {/* Scroll Indicator */}
+      {/* SECTION 1: LETTERS / MESSAGES */}
+      <div className="tf3-letters-section">
+        {[
+          {
+            img: '/hod-placeholder.jpg',
+            heading: 'Letter from HOD',
+            text: 'Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.',
+          },
+          {
+            img: '/advisor-cs-placeholder.jpg',
+            heading: 'Letter from CS Club Advisor',
+            text: 'TechFusion is a platform for students to shine and grow. We look forward to your participation and creativity!',
+          },
+          {
+            img: '/advisor-ieee-placeholder.jpg',
+            heading: 'Letter from IEEE Advisor',
+            text: 'Let’s make TechFusion 3.0 a memorable journey of learning, networking, and fun. Best wishes to all participants!',
+          },
+        ].map((card, idx) => (
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="scroll-indicator"
+            className="tf3-letter-card"
+            key={card.heading}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: idx * 0.2 }}
           >
-            <p>Scroll to explore more</p>
-            <div className="scroll-icon">
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="scroll-dot"
-              />
+            <div className="tf3-letter-img-wrap">
+              <img src={card.img} alt={card.heading} className="tf3-letter-img" />
+            </div>
+            <div className="tf3-letter-content tf3-letter-content-centered">
+              <motion.h3
+                className="tf3-letter-heading tf3-purple"
+                initial={{ x: -60, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.7, delay: 0.1 + idx * 0.2 }}
+                style={{ textAlign: 'left', marginBottom: '0.7rem' }}
+              >
+                {card.heading}
+              </motion.h3>
+              <motion.p
+                className="tf3-letter-text"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.8, delay: 0.5 + idx * 0.2 }}
+                style={{ textAlign: 'left' }}
+              >
+                {card.text}
+              </motion.p>
             </div>
           </motion.div>
-        </motion.div>
+        ))}
+      </div>
+
+      {/* SECTION 2: EVENT HEADS / TEAM */}
+      <div className="tf3-team-section">
+        <h2 className="tf3-team-title tf3-purple">Event Heads</h2>
+        <div className="tf3-team-cards">
+          {[
+            {
+              img: '/rahemeen-placeholder.jpg',
+              name: 'Rahemeen Kamran',
+              title: 'IEEE Chairperson',
+            },
+            {
+              img: '/alishba-placeholder.jpg',
+              name: 'Alishba Malik',
+              title: 'IEEE Chairperson',
+            },
+            {
+              img: '/faheela-placeholder.jpg',
+              name: 'Faheela Farooq',
+              title: 'CS Club President',
+            },
+          ].map((member, idx) => (
+            <motion.div
+              className="tf3-team-card"
+              key={member.name}
+              whileHover={{ scale: 1.07, boxShadow: '0 0 24px #a084e8' }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.15 }}
+            >
+              <div className="tf3-team-img-wrap">
+                <img src={member.img} alt={member.name} className="tf3-team-img" />
+              </div>
+              <div className="tf3-team-info">
+                <div className="tf3-team-name">{member.name}</div>
+                <div className="tf3-team-pos tf3-purple">{member.title}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   )
