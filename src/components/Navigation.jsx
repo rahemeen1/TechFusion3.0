@@ -1,68 +1,103 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { NavLink, Link as RouterLink } from 'react-router-dom'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Drawer from '@mui/material/Drawer'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import MenuIcon from '@mui/icons-material/Menu'
+
 import './Navigation.css'
 
-function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Competitions', href: '/competitions' },
+  { label: 'Contact', href: '/contact' },
+]
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Competitions', href: '/competitions' },
-    { label: 'Team', href: '/team' },
-    { label: 'Contact', href: '/contact' },
-  ]
+function Navigation() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const toggleDrawer = () => setMobileOpen((v) => !v)
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="nav-logo-section"
-        >
-          <Link to="/" className="logo-link">
-            <div className="logo-brand">
+    <>
+      <AppBar
+        position="fixed"
+        elevation={8}
+        sx={{
+          background: 'rgba(10, 14, 39, 0.98)',
+          backdropFilter: 'blur(20px)',
+          borderBottom: '2px solid',
+          borderImage: 'linear-gradient(90deg, #06b6d4 0%, #8b5cf6 100%) 1',
+        }}
+      >
+        <Toolbar sx={{ maxWidth: 1400, width: '100%', mx: 'auto' }}>
+          <Typography component={RouterLink} to="/" sx={{ flexGrow: 1, textDecoration: 'none' }}>
+            <span className="logo-brand">
               <span className="logo-text">
                 <span className="tech-text">TECH</span>
                 <span className="fusion-text">FUSION</span>
               </span>
               <span className="logo-version">3.0</span>
-            </div>
-          </Link>
-        </motion.div>
+            </span>
+          </Typography>
 
-        <div className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          {navItems.map((item, index) => (
-            <motion.div
-              key={item.href}
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-            >
-              <Link
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+            {navItems.map((item) => (
+              <Button
+                key={item.href}
+                component={NavLink}
                 to={item.href}
-                className="nav-link"
-                onClick={() => setIsOpen(false)}
+                color="inherit"
+                sx={{
+                  px: 2,
+                  py: 1,
+                  borderRadius: 1,
+                  '&.active': {
+                    color: '#06b6d4',
+                    borderBottom: '2px solid #06b6d4',
+                  },
+                }}
               >
                 {item.label}
-                <span className="nav-underline"></span>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+              </Button>
+            ))}
+          </Box>
 
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsOpen(!isOpen)}
-          className="nav-toggle"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </motion.button>
-      </div>
-    </nav>
+          <IconButton
+            color="inherit"
+            onClick={toggleDrawer}
+            sx={{ display: { xs: 'inline-flex', md: 'none' } }}
+            aria-label="Open navigation menu"
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      <Drawer anchor="top" open={mobileOpen} onClose={toggleDrawer} sx={{ display: { md: 'none' } }}>
+        <Box sx={{ background: 'rgba(10, 14, 39, 0.98)', color: '#e2e8f0' }}>
+          <List>
+            {navItems.map((item) => (
+              <ListItem key={item.href} disablePadding>
+                <ListItemButton component={NavLink} to={item.href} onClick={toggleDrawer}
+                  sx={{ '&.active .MuiListItemText-primary': { color: '#06b6d4', fontWeight: 700 } }}
+                >
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
   )
 }
 
