@@ -72,6 +72,7 @@
   max-width: 1200px;
   margin: 0 auto 4rem;
   display: grid;
+  gap: 3.5rem 2rem; 
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
   row-gap: 10rem;

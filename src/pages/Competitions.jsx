@@ -194,7 +194,10 @@ function Competitions() {
               <Box
                 onMouseEnter={() => handleMouseEnter(competition.id)}
                 onMouseLeave={() => handleMouseLeave(competition.id)}
-                sx={{ position: 'relative', width: '100%', height: '100%', minHeight: 230 }}
+                sx={{ position: 'relative',
+    width: '100%',
+    height: 320,          // 🔴 ADD THIS
+    marginBottom: '2rem'   }}
               >
                 <motion.div
                   animate={{ rotateY: isFlipped ? 180 : 0 }}
