@@ -35,7 +35,7 @@ const competitions = [
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLScHlZooudoewj1AgpVMDjWeGG3-NVjSIz3wsfIH_7cJ5OT8Mg/viewform?usp=header',
     head: {
       name: 'Roshni Fareed',
-      phone: '+92 323 2545157',
+      phone: '0323-2545157',
       pic: roshniImg,
       role: 'Head, Flash Coding Competition',
       driveLink: 'https://drive.google.com/file/d/1USV1PazuUbLWDC-DywTiO_4_ReSERnlQ/view',
@@ -80,7 +80,7 @@ const competitions = [
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSceJGWz7l3aDx7Ew73ob2_T4yNjYo7WDuaWCXZFPRSh3BA2nA/viewform',
     head: {
       name: 'Mareeha Sarwar',
-      phone: '+92 331 6706274',
+      phone: '0331-6706274',
       pic: mareehaImg,
       role: 'Competition Head, Idea Pitch',
       driveLink: 'https://drive.google.com/file/d/1XcQ9WGAT_kQZWOdFCYcKieSGS-Rcqr6C/view',
@@ -95,7 +95,7 @@ const competitions = [
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf8qPJWIqHxnTbMTaXOZ-VdhA35AF44iU0bypO-G4O1dPMRTw/viewform',
     head: {
       name: 'Mubashra Noor',
-      phone: '+92 322 4252786',
+      phone: '0322-4252786',
       pic: mubasharaImg,
       role: 'Poster Competition Head',
       driveLink: 'https://drive.google.com/file/d/13OqjrDgFQqxbsGcrdkL1zqikxi_RQi4s/view',
@@ -140,7 +140,7 @@ const competitions = [
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfdxdJQGv9RBFvURhhrB7C_7-3VdGJeJZJyAQAnswh88EJw6g/viewform',
     head: {
       name: ['Kohinoor', 'Mubashara'],
-      phone: ['0331-4396900', ''],
+      phone: ['0331-4396900', '0309-5216393'],
       pic: [kohinoorImg, mubashara7Img],
       driveLink: 'https://drive.google.com/file/d/1WGGqKlF8vZDFBwt9ey0SUvxm8FtbJDsa/view',
     },

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, Loader } from 'lucide-react'
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
 
@@ -35,6 +35,21 @@ function Contact() {
       title: 'Location',
       detail: '93-Jail Road, Lahore, 54000',
       link: '#',
+    },
+  ]
+
+  const socials = [
+    {
+      href: 'https://www.instagram.com/kinnairdcsclub?igsh=MXBjbm1wMmFqYW5iYQ==',
+      label: 'Kinnaird CS Club on Instagram',
+    },
+    {
+      href: 'https://www.instagram.com/ieee_kinnaird_official?igsh=MWU0dnl3OTM2aHI4',
+      label: 'IEEE Kinnaird Official on Instagram',
+    },
+    {
+      href: 'https://www.instagram.com/ieee_wie_kinnaird?igsh=MW9wZDlrNGpxaTE5MQ==',
+      label: 'IEEE WIE Kinnaird on Instagram',
     },
   ]
 
@@ -312,34 +327,20 @@ function Contact() {
                 style={{ marginTop: '1.5rem' }}
               >
                 <p className="page-subtitle" style={{ marginBottom: '1rem' }}>For regular updates follow us!</p>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
-                  <motion.a
-                    href="https://www.instagram.com/ieee_kinnaird_official/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -5 }}
-                    style={{ color: '#06b6d4', fontSize: '2rem' }}
-                  >
-                    <FaInstagram />
-                  </motion.a>
-                  <motion.a
-                    href="https://www.facebook.com/IEEEKINNAIRD/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -5 }}
-                    style={{ color: '#06b6d4', fontSize: '2rem' }}
-                  >
-                    <FaFacebook />
-                  </motion.a>
-                  <motion.a
-                    href="https://www.linkedin.com/in/ieee-kinnaird-student-branch-03a96b269/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -5 }}
-                    style={{ color: '#06b6d4', fontSize: '2rem' }}
-                  >
-                    <FaLinkedin />
-                  </motion.a>
+                <div className="social-links">
+                  {socials.map((social, idx) => (
+                    <motion.a
+                      key={idx}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      whileHover={{ scale: 1.2, y: -5 }}
+                      className="social-icon"
+                    >
+                      <FaInstagram />
+                    </motion.a>
+                  ))}
                 </div>
               </motion.div>
             </div>
