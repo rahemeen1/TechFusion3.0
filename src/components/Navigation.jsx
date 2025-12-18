@@ -32,7 +32,7 @@ function Navigation() {
         position="fixed"
         elevation={8}
         sx={{
-          background: 'rgba(10, 14, 39, 0.98)',
+          background: '#33215d7b',
           backdropFilter: 'blur(20px)',
           borderBottom: '2px solid',
           borderImage: 'linear-gradient(90deg, #06b6d4 0%, #8b5cf6 100%) 1',
@@ -59,7 +59,7 @@ function Navigation() {
                 sx={{
                   px: 2,
                   py: 1,
-                  borderRadius: 1,
+                  borderRadius: 0,
                   '&.active': {
                     color: '#06b6d4',
                     borderBottom: '2px solid #06b6d4',

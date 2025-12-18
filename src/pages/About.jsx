@@ -79,7 +79,7 @@ export default function About() {
 
       {/* Competitions Section */}
       <section className="about-section competitions-section">
-        <h2 className="about-title" style={{ fontSize: '2rem', textAlign: 'center' }}>Competitions at TechFusion 3.0</h2>
+        <h2 className="about-title" style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '40px' }}>Competitions at TechFusion 3.0</h2>
         <Grid container spacing={3} className="competitions-grid" justifyContent="center" alignItems="stretch">
           {competitions.map((comp) => (
             <Grid item xs={12} sm={6} md={3} key={comp.name} style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch' }}>
