@@ -3,14 +3,15 @@
   padding: 80px 2rem 40px;
   position: relative;
   overflow: hidden;
-  background:
+  margin-top: 60px;
+  /* background:
     linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
     url('/images/backgrounds/starfield.png');
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
-  background-blend-mode: overlay, normal;
+  background-blend-mode: overlay, normal; */
 }
 
 .competitions-container::before {

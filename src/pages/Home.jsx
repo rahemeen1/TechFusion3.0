@@ -47,21 +47,7 @@ function Home() {
   return (
     <div className="home-container">
       {/* Animated Background Stars */}
-      {stars.map((star) => (
-        <motion.div
-          key={star.id}
-          className="star"
-          style={{ left: `${star.x}%`, top: `${star.y}%` }}
-          animate={{
-            opacity: [0.3, 1, 0.3],
-            scale: [0.5, 1.5, 0.5],
-          }}
-          transition={{
-            duration: Math.random() * 3 + 2,
-            repeat: Infinity,
-          }}
-        />
-      ))}
+      
 
       {/* SECTION 0: HERO BANNER */}
       <div className="tf3-hero-banner-section">
@@ -78,16 +64,11 @@ function Home() {
         {[
           {
             img: drsidraImg,
-            heading: 'Letter from HOD',
+            heading: 'Letter from the HOD',
             text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
 
 TechFusion 3.0 is not just an event, but a celebration of the spirit of technology and learning. Over the years, our students and faculty have worked tirelessly to create a platform where creativity, critical thinking, and technical skills converge. This year, we are excited to present a diverse range of competitions, workshops, and networking opportunities that will challenge and inspire you.
-We believe that true innovation happens when passionate minds come together to solve real-world problems. TechFusion 3.0 is designed to foster collaboration, encourage experimentation, and ignite curiosity. Whether you are participating in a coding challenge, attending a workshop, or simply exploring the exhibits, we hope you find inspiration and motivation to push your boundaries.
-I extend my heartfelt gratitude to the organizing teams, our partners, and every participant for making this event possible. Let us continue to support each other, share knowledge, and build a vibrant tech community at Kinnaird College and beyond.
-Wishing you all a successful and memorable TechFusion 3.0!
-As we embark on this journey together, let us remember that every great achievement starts with a single idea and the courage to pursue it. TechFusion 3.0 is a testament to the power of vision, teamwork, and perseverance. I encourage each of you to take full advantage of the opportunities presented, to learn from one another, and to contribute your unique perspectives.
-
-Let this event be a source of inspiration and growth, not only for your technical skills but also for your personal and professional development. The friendships and connections you make here will last far beyond these two days. Embrace the challenges, celebrate your successes, and never stop striving for excellence.
+We believe that true innovation happens when passionate minds come together to solve real-world problems.
 
 Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
           },

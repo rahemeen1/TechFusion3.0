@@ -26,10 +26,10 @@ html {
 body {
   /* Layer gradients on top of a subtle starfield image */
   background:
-    radial-gradient(ellipse at 60% 40%, #2b2256 0%, #1a133a 60%, #0a0e27 100%),
-    linear-gradient(135deg, #3a256b 0%, #2b2256 60%, #0a0e27 100%),
-    url('/images/backgrounds/starfield.png');
-  background-size: auto, auto, cover;
+    /* radial-gradient(ellipse at 60% 40%, #2b2256 0%, #1a133a 60%, #0a0e27 100%),
+    linear-gradient(135deg, #3a256b 0%, #2b2256 60%, #0a0e27 100%), */
+    url('assets/star.jpg.jpeg');
+  background-size: cover;
   background-attachment: fixed, fixed, fixed;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center, center, center;

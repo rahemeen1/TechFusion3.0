@@ -55,7 +55,7 @@
   border-radius: 1.5rem;
   box-shadow: 0 4px 32px #a084e850;
   overflow: hidden;
-  min-height: 220px;
+  min-height: 120px;
   transition: box-shadow 0.3s, transform 0.3s;
   border: 1.5px solid #a084e830;
 }
@@ -63,15 +63,24 @@
   box-shadow: 0 8px 48px #a084e8cc, 0 0 0 2px #a084e8;
   transform: translateY(-6px) scale(1.02);
 }
-.tf3-letter-img-wrap {
-  flex: 0 0 180px;
-  height: 180px;
+/* .tf3-letter-img-wrap {
+  flex: 1 0 120px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #1a1333;
   border-radius: 1.5rem 0 0 1.5rem;
   overflow: hidden;
+} */
+.tf3-letter-img-wrap{
+  flex: 0 0 160px;
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background: #1a1333;
 }
 .tf3-letter-img {
   width: 100%;
@@ -420,14 +429,14 @@
   overflow: hidden;
   padding-top: 64px;
   /* Blend page gradient with the global starfield for consistency */
-  background:
+  /* background:
     linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
     url('/images/backgrounds/starfield.png');
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
-  background-blend-mode: overlay, normal;
+  background-blend-mode: overlay, normal; */
 }
 
 .partner-logos-top {
