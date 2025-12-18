@@ -1,7 +1,7 @@
 .tf3-letter-content-centered {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
 }
 /* --- TechFusion 3.0 Hero Banner Section --- */
