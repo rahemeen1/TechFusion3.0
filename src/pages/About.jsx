@@ -65,7 +65,7 @@ export default function About() {
       <section className="about-section">
         <h1 className="about-title">About TechFusion 3.0</h1>
         <Typography variant="body1" sx={{ color: '#c7bfff', fontSize: '1.13rem', mb: 2 }}>
-          TechFusion 3.0 is Kinnaird College’s flagship student-led technology festival, bringing together hundreds of students, educators, and industry professionals for two days of innovation, learning, and collaboration. The event features a vibrant mix of competitions, hands-on workshops, expert seminars, and networking opportunities, all designed to empower the next generation of tech leaders. Whether you’re a coder, designer, gamer, or aspiring entrepreneur, TechFusion 3.0 offers a platform to showcase your talent, learn new skills, and connect with like-minded peers in a dynamic, inclusive environment.
+          TechFusion 3.0 is the flagship student-led technology festival of the Kinnaird College Computer Science Department, organized annually by IEEE, IEEE WIE Kinnaird Chapter, and the Kinnaird Computer Science Club (KCSC).This two-day event brings together students, educators, and industry professionals to celebrate innovation, collaboration, and learning. Featuring competitions, hands-on workshops, expert seminars, and networking opportunities, TechFusion 3.0 empowers the next generation of tech leaders.Whether you’re a coder, designer, gamer, or aspiring entrepreneur, the festival provides a platform to showcase talent, learn new skills, and connect with like-minded peers in a dynamic, inclusive environment.
         </Typography>
         <div className="about-subtitle">Our Mission</div>
         <div className="about-mission">

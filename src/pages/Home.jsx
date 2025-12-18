@@ -57,7 +57,7 @@ function Home() {
           style={{ width: '100%', height: 'auto', display: 'block', maxWidth: '100vw', objectFit: 'cover' }}
         />
       </div>
-      <div className="tf3-hero-dates tf3-purple" style={{ textAlign: 'center', fontWeight: 700, fontSize: '2.2rem', margin: '1.5rem 0 2.2rem 0', letterSpacing: '0.05em' }}>21–22 January</div>
+
 
       {/* SECTION 1: LETTERS / MESSAGES */}
       <div className="tf3-letters-section">
@@ -65,22 +65,17 @@ function Home() {
           {
             img: drsidraImg,
             heading: 'Letter from the HOD',
-            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-
-TechFusion 3.0 is not just an event, but a celebration of the spirit of technology and learning. Over the years, our students and faculty have worked tirelessly to create a platform where creativity, critical thinking, and technical skills converge. This year, we are excited to present a diverse range of competitions, workshops, and networking opportunities that will challenge and inspire you.
-We believe that true innovation happens when passionate minds come together to solve real-world problems.
-
-Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
           },
           {
             img: drghousiaImg,
             heading: 'Letter from CS Club Advisor',
-            text: 'TechFusion is a platform for students to shine and grow. We look forward to your participation and creativity!'
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
           },
           {
             img: faheelaImg,
             heading: 'Letter from IEEE Advisor',
-            text: 'Let’s make TechFusion 3.0 a memorable journey of learning, networking, and fun. Best wishes to all participants!'
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
           },
         ].map((card, idx) => (
           <motion.div
@@ -122,7 +117,7 @@ Thank you for being a part of TechFusion 3.0. Together, we are shaping the futur
 
       {/* SECTION 2: EVENT HEADS / TEAM */}
       <div className="tf3-team-section">
-        <h2 className="tf3-team-title tf3-purple">Event Heads</h2>
+        <h2 className="tf3-team-title tf3-purple" style={{ fontSize: '3.5rem', width: '100%', letterSpacing: '0.04em', padding: '0.5rem 0', textAlign: 'center' }}>Event Heads</h2>
         <div className="tf3-team-cards">
           {[
             {
@@ -169,5 +164,7 @@ Thank you for being a part of TechFusion 3.0. Together, we are shaping the futur
     </div>
   )
 }
-
+<div className="info-card couture">
+  ...
+</div>
 export default Home
