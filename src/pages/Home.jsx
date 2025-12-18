@@ -67,17 +67,26 @@ function Home() {
           {
             img: drsidraImg,
             heading: 'Letter from the HOD',
-            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
+            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
+                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.`
           },
           {
             img: drghousiaImg,
             heading: 'Letter from CS Club Advisor',
-            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
+            text: `Welcome to TechFusion 3.0!`
           },
           {
             img: msidaImg,
             heading: 'Letter from IEEE Advisor',
-            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, vitae euismod nisi nisi euismod.`
+            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
+                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
+                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
+                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
+                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
           },
         ].map((card, idx) => (
           <motion.div
