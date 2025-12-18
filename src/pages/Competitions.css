@@ -1,8 +1,8 @@
 .competitions-container {
   min-height: 100vh;
-  padding: 80px 2rem 40px;
+  padding: 80px 2rem 200px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin-top: 60px;
   /* background:
     linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
@@ -74,6 +74,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
+  row-gap: 10rem;
   position: relative;
   z-index: 10;
   padding: 0 1rem;
