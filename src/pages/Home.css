@@ -43,80 +43,127 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  max-width: 950px;
+  max-width: 1050px;
   margin: 0 auto 3.5rem auto;
+  padding: 0 1rem;
   z-index: 13;
 }
 
 .tf3-letter-card {
   display: grid;
-  grid-template-columns: 1fr 1.75fr;
+  grid-template-columns: 280px 1fr;
   background: rgba(24, 18, 48, 0.97);
   border-radius: 1.5rem;
   box-shadow: 0 4px 32px #a084e850;
   transition: box-shadow 0.3s, transform 0.3s;
   border: 1.5px solid #a084e830;
-  min-height: 64vh;
+  overflow: hidden;
+  min-height: 400px;
 }
 .tf3-letter-card:hover {
   box-shadow: 0 8px 48px #a084e8cc, 0 0 0 2px #a084e8;
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-4px);
 }
 .tf3-letter-img-wrap {
   position: relative;
   border-radius: 1.5rem 0 0 1.5rem;
   background: #1a1333;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 .tf3-letter-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1.5rem 0 0 1.5rem;
+  display: block;
 }
 .tf3-letter-content {
   padding: 2rem 2.5rem;
   color: #e2e8f0;
-  min-height: 64vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 .tf3-letter-heading {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
   text-align: left;
+  color: #a084e8;
 }
 .tf3-letter-text {
-  font-size: clamp(1rem, 2.5vw, 1rem);
+  font-size: 0.95rem;
   color: #c7bfff;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.7;
   word-break: break-word;
 }
 
-@media (max-width: 900px) {
-  .tf3-letter-card {
-    flex-direction: column;
-    min-height: unset;
-    text-align: center;
+@media (max-width: 768px) {
+  .tf3-letters-section {
+    padding: 0 0.75rem;
+    gap: 1.5rem;
   }
+  
+  .tf3-letter-card {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    grid-template-columns: none;
+  }
+  
   .tf3-letter-img-wrap {
     border-radius: 1.5rem 1.5rem 0 0;
     width: 100%;
-    height: 180px;
+    height: 240px;
+    min-height: 240px;
   }
+  
   .tf3-letter-img {
     border-radius: 1.5rem 1.5rem 0 0;
+    object-fit: cover;
   }
-  .tf3-letter-content, .tf3-letter-content-centered {
-    padding: 1.5rem 1.2rem;
-    text-align: center;
-    align-items: center;
+  
+  .tf3-letter-content {
+    padding: 1.5rem 1.25rem;
   }
-  .tf3-letter-heading, .tf3-letter-text {
+  
+  .tf3-letter-heading {
+    font-size: 1.3rem;
     text-align: center;
+  }
+  
+  .tf3-letter-text {
+    font-size: 0.9rem;
+    text-align: center;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .tf3-letter-card {
+    border-radius: 1rem;
+  }
+  
+  .tf3-letter-img-wrap {
+    height: 200px;
+    min-height: 200px;
+  }
+  
+  .tf3-letter-content {
+    padding: 1.25rem 1rem;
+  }
+  
+  .tf3-letter-heading {
+    font-size: 1.2rem;
+  }
+  
+  .tf3-letter-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 }
 
