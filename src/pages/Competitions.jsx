@@ -17,7 +17,7 @@ import escapeRoomImg from '../assets/escaperoom.png'
 import roshniImg from '../assets/roshni.jpeg'
 import alishbaFatimaImg from '../assets/alishbafatima.jpeg'
 import alishbaNadeemImg from '../assets/alishbanadeem.jpeg'
-import raaniaImg from '../assets/humna.jpeg'
+import raaniaImg from '../assets/sanashaukat.jpeg'
 import mareehaImg from '../assets/mareeha.jpeg'
 import mubasharaImg from '../assets/mubashara.jpeg'
 import mubashara7Img from '../assets/mubashara7.jpeg'
@@ -64,7 +64,7 @@ const competitions = [
     fee: 'PKR 1500 per team',
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSezsiZsk9PFysQhJFK33BI99mZWuK7ld-7tOPH0ukWVISyjtA/viewform',
     head: {
-      name: 'Raania Khurram',
+      name: 'Sana Shaukat',
       phone: '0307-8840877',
       pic: raaniaImg,
       role: 'Competition Head, Designathon',
