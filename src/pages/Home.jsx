@@ -69,14 +69,22 @@ function Home() {
           {
             img: drsidraImg,
             heading: 'Letter from the HOD',
-            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
+            text: `  To our Students, Guests, and Global Community, 
+
+            For 112 years, Kinnaird has stood as a hallmark of excellence in grooming women to become leaders of impact. Our institution is built on a legacy of intellectual empowerment and grace. As we move this prestigious tradition forward, the Department is honored to host our premier flagship event, Techfusion 3.0 x Shestrike.
+
+            This event represents a powerful convergence of technical innovation and the vibrant world of gaming. By merging the professional rigor of Techfusion with the renowned energy of Shestrike, we are creating a platform where technical mastery meets creative strategy. Our focus remains on preparing women to lead in high growth industries like Game Development, Cybersecurity, and Artificial Intelligence.
+
+            While Kinnaird is rooted in the education of women, we are firm believers in the power of inclusion and diversity. We recognize that true innovation thrives on a rich exchange of ideas from across the academic landscape. We are proud to open our doors for intra-university networking, inviting participants to experience the serenity and prestige of our campus while collaborating on the future of technology. 
+
+            Our goal is to equip every attendee with the professional insights and competitive edge needed to dominate the modern workforce. From career strategy to hands on creation, this summit is a testament to our commitment to progress.
+
+            I invite you to step into this arena to showcase your talent and experience the unique strength of our community. Together, we will be pioneering new frontiers in the digital world.
+
+            With profound regards,
+Dr. Sidra Zafar
+Head of Department, Computer Science 
+Kinnaird College for Women `
           },
           {
             img: msghousiaImg,
