@@ -43,7 +43,7 @@ const competitions = [
   },
   {
     id: 2,
-    title: 'Gaming Competition',
+    title: 'SheStrike Competition',
     logo: gamingImg,
     team: 'Individual',
     fee: 'PKR 500 per participant',
@@ -64,7 +64,7 @@ const competitions = [
     fee: 'PKR 1500 per team',
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSezsiZsk9PFysQhJFK33BI99mZWuK7ld-7tOPH0ukWVISyjtA/viewform',
     head: {
-      name: 'Sana Shaukat',
+      name: 'Sania Shaukat',
       phone: '0307-8840877',
       pic: raaniaImg,
       role: 'Competition Head, Designathon',
@@ -79,7 +79,7 @@ const competitions = [
     fee: 'PKR 500 per team',
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSceJGWz7l3aDx7Ew73ob2_T4yNjYo7WDuaWCXZFPRSh3BA2nA/viewform',
     head: {
-      name: 'Mareeha Sarwar',
+      name: 'Mareeha',
       phone: '0331-6706274',
       pic: mareehaImg,
       role: 'Competition Head, Idea Pitch',
