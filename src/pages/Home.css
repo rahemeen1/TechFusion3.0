@@ -101,21 +101,6 @@
   word-break: break-word;
 }
 
-<<<<<<< HEAD
-@media (max-width: 768px) {
-  .tf3-letters-section {
-    padding: 0 0.75rem;
-    gap: 1.5rem;
-  }
-  
-  .tf3-letter-card {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    grid-template-columns: none;
-  }
-  
-=======
 @media (max-width: 900px) {
   .tf3-letter-card {
     display: flex;              /* ✅ IMPORTANT */
@@ -123,26 +108,8 @@
     min-height: unset;
   }
 
->>>>>>> a41352a (Fixed)
   .tf3-letter-img-wrap {
     width: 100%;
-<<<<<<< HEAD
-    height: 240px;
-    min-height: 240px;
-  }
-  
-  .tf3-letter-img {
-    border-radius: 1.5rem 1.5rem 0 0;
-    object-fit: cover;
-  }
-  
-  .tf3-letter-content {
-    padding: 1.5rem 1.25rem;
-  }
-  
-  .tf3-letter-heading {
-    font-size: 1.3rem;
-=======
     height: 260px;              /* ✅ CONTROL IMAGE SIZE */
     position: relative;
     border-radius: 1.5rem 1.5rem 0 0;
@@ -169,7 +136,6 @@
 
   .tf3-letter-heading,
   .tf3-letter-text {
->>>>>>> a41352a (Fixed)
     text-align: center;
   }
   
