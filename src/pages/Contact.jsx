@@ -24,12 +24,7 @@ function Contact() {
       detail: 'techfusion@kinnaird.edu.pk',
       link: 'mailto:techfusion@kinnaird.edu.pk',
     },
-    {
-      icon: Phone,
-      title: 'Phone',
-      detail: '+92 42 5758 5000',
-      link: 'tel:+924257585000',
-    },
+   
     {
       icon: MapPin,
       title: 'Location',
