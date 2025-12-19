@@ -24,6 +24,7 @@ import mubashara7Img from '../assets/mubashara7.jpeg'
 import hifzaImg from '../assets/hifza.jpeg'
 import kohinoorImg from '../assets/kohinoor.jpeg'
 import './Competitions.css'
+import sheImg from '../assets/she.jpeg'
 
 const competitions = [
   {
@@ -44,7 +45,7 @@ const competitions = [
   {
     id: 2,
     title: 'SheStrike Competition',
-    logo: gamingImg,
+    logo:sheImg,
     team: 'Individual',
     fee: 'PKR 500 per participant',
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdmJS_fb8OT_CCDcYYw7VcJYfyzg95lRa7IspH6GeDylUfoew/viewform',
@@ -65,7 +66,7 @@ const competitions = [
     registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSezsiZsk9PFysQhJFK33BI99mZWuK7ld-7tOPH0ukWVISyjtA/viewform',
     head: {
       name: 'Sania Shaukat',
-      phone: '0307-8840877',
+      phone: '0306-4427570',
       pic: raaniaImg,
       role: 'Competition Head, Designathon',
       driveLink: 'https://drive.google.com/file/d/1i-iDZrJ_pugsGzSYB8DOL3gAOqgOE9tw/view',
@@ -175,7 +176,14 @@ function Competitions() {
         <p className="page-subtitle">
           Showcase your skills across diverse technical domains. Choose your
           challenge and compete with the brightest minds.
+          <br>
+          
+          </br>
+          <b> <i>Registration Deadline: 18 January 2026</i> </b>
+          
+          
         </p>
+         
       </motion.div>
 
       {/* Competitions Grid */}
