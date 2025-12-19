@@ -19,7 +19,7 @@ function Team() {
     {
       id: 3,
       name: 'Faheela Farooq',
-      position: 'President CS Club',
+      position: 'President Kinnaird CS Club',
       icon: '🎓',
     },
   ]
