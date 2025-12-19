@@ -24,7 +24,7 @@ import mubashara7Img from '../assets/mubashara7.jpeg'
 import hifzaImg from '../assets/hifza.jpeg'
 import kohinoorImg from '../assets/kohinoor.jpeg'
 import './Competitions.css'
-import sheImg from '../assets/she.jpeg'
+import sheImg from '../assets/shestrike.png'
 
 const competitions = [
   {
@@ -287,10 +287,11 @@ function Competitions() {
                                     width: 100,
                                     height: 100,
                                     borderRadius: '50%',
-                                    objectFit: 'cover',
+                                    objectFit: 'contain',
                                     border: '3px solid rgba(139, 92, 246, 0.8)',
                                     position: 'relative',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    backgroundColor: 'rgba(14, 21, 45, 0.8)'
                                   }}
                                 />
                               </Box>
@@ -320,10 +321,11 @@ function Competitions() {
                                   width: 120,
                                   height: 120,
                                   borderRadius: '50%',
-                                  objectFit: 'cover',
+                                  objectFit: 'contain',
                                   border: '3px solid rgba(139, 92, 246, 0.8)',
                                   position: 'relative',
-                                  zIndex: 1
+                                  zIndex: 1,
+                                  backgroundColor: 'rgba(14, 21, 45, 0.8)'
                                 }}
                               />
                             </Box>
