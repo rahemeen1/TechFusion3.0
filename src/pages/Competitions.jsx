@@ -44,7 +44,7 @@ const competitions = [
   },
   {
     id: 2,
-    title: 'SheStrike Competition',
+    title: 'SheStrike Battle Zone Competition',
     logo:sheImg,
     team: 'Individual',
     fee: 'PKR 500 per participant',
@@ -187,7 +187,7 @@ function Competitions() {
       </motion.div>
 
       {/* Competitions Grid */}
-      <div className="competitions-grid" style={{ marginTop: 120, marginBottom: 100 }}>
+      <div className="competitions-grid" style={{ marginTop:40, marginBottom: 100 }}>
         {competitions.map((competition, index) => {
           const isFlipped = flippedCards[competition.id]
           return (
