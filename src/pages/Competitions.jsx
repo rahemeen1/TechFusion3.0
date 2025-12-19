@@ -270,7 +270,7 @@ function Competitions() {
                         {/* Head Image(s) and Name(s) */}
                         {Array.isArray(competition.head.pic) ? (
                           competition.head.pic.map((pic, idx) => (
-                            <Box key={idx} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 2 }}>
+                            <Box key={idx} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mx: 1 }}>
                               <Box sx={{ position: 'relative', display: 'inline-block' }}>
                                 <Box sx={{
                                   position: 'absolute',
@@ -284,8 +284,8 @@ function Competitions() {
                                   src={pic}
                                   alt={competition.head.name[idx]}
                                   style={{
-                                    width: 100,
-                                    height: 100,
+                                    width: 80,
+                                    height: 80,
                                     borderRadius: '50%',
                                     objectFit: 'contain',
                                     border: '3px solid rgba(139, 92, 246, 0.8)',
@@ -295,7 +295,7 @@ function Competitions() {
                                   }}
                                 />
                               </Box>
-                              <Typography variant="h6" sx={{ fontWeight: 800, color: '#fff', textAlign: 'center', fontSize: '1.08rem', mt: 1 }}>
+                              <Typography variant="h6" sx={{ fontWeight: 600, color: '#fff', textAlign: 'center', fontSize: '0.85rem', mt: 1 }}>
                                 {competition.head.name[idx]}
                               </Typography>
                               <Typography sx={{ color: '#06b6d4', fontWeight: 700, fontSize: '1.05rem', mt: 0.5 }}>
