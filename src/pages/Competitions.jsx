@@ -142,7 +142,7 @@ const competitions = [
       name: ['Kohinoor', 'Mubashara'],
       phone: ['0331-4396900', '0309-5216393'],
       pic: [kohinoorImg, mubashara7Img],
-      driveLink: 'https://drive.google.com/file/d/1WGGqKlF8vZDFBwt9ey0SUvxm8FtbJDsa/view',
+      driveLink: 'https://drive.google.com/file/d/1LFmwpNPHYox2TU-XQ-Cwz4RXKv2MwIho/view?usp=sharing',
     },
   },
 ]
