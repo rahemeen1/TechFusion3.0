@@ -149,7 +149,7 @@ function Contact() {
         transition={{ duration: 0.8 }}
         className="contact-header"
       >
-        <h1 className="page-title gradient-text">IEEE</h1>
+        <h1 className="page-title gradient-text">TechFusion 3.0</h1>
         <h3 className="page-subtitle" style={{ fontSize: '1.8rem', marginTop: '0.5rem' }}>Contact Us</h3>
       </motion.div>
 
