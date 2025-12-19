@@ -6,6 +6,8 @@ import faheelaImg from '../assets/faheela.jpeg';
 import rahemeenImg from '../assets/rahemeen.jpeg';
 import drsidraImg from '../assets/drsidra.jpeg';
  import msidaImg from '../assets/msida.jpg.jpeg';
+ import msghousiaImg from '../assets/msghousia.jpeg';
+
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
@@ -77,7 +79,7 @@ function Home() {
                   Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
           },
           {
-            img: drghousiaImg,
+            img: msghousiaImg,
             heading: 'Letter from CS Club Advisor',
             text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
                   Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
