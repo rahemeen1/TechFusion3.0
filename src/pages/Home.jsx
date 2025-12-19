@@ -156,7 +156,7 @@ function Home() {
             {
               img: faheelaImg,
               name: 'Faheela Farooq',
-              title: 'CS Club President',
+              title: 'Kinnaird CS Club President',
             },
           ].map((member, idx) => (
             <motion.div
