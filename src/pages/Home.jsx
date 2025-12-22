@@ -49,17 +49,16 @@ function Home() {
   }
 
   return (
-    <div className="home-container">
-      {/* Animated Background Stars */}
-      
-
+    <>
       {/* SECTION 0: HERO BANNER */}
       <div className="tf3-hero-banner-section">
-        <img
-          src={techfusionBanner}
-          alt="TechFusion 3.0 Banner"
-          style={{ width: '100%', height: 'auto', display: 'block', maxWidth: '100vw', objectFit: 'cover' }}
-        />
+        <div className="tf3-hero-banner">
+          <img
+            src={techfusionBanner}
+            alt="TechFusion 3.0 Banner"
+            className="tf3-hero-banner-img"
+          />
+        </div>
       </div>
 
 
@@ -194,7 +193,7 @@ Kinnaird College for Women `
           ))}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

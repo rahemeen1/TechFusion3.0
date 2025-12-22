@@ -6,7 +6,7 @@
 }
 /* --- TechFusion 3.0 Hero Banner Section --- */
 .tf3-hero-banner-section {
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto 2.5rem auto;
   display: flex;
@@ -14,17 +14,35 @@
   align-items: center;
   position: relative;
   z-index: 12;
+  padding: 0;
 }
+
+@media (max-width: 600px) {
+  .tf3-hero-banner-section {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+.tf3-hero-banner-section img,
 .tf3-hero-banner-img {
-  width: 100vw;
-  max-width: 1600px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 0 0 2.5rem 2.5rem;
-  box-shadow: 0 8px 32px #a084e8cc;
-  margin-bottom: 0.5rem;
-  background: #1a1333;
   display: block;
+}
+
+@media (min-width: 600px) {
+  .tf3-hero-banner-img {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .tf3-hero-banner-section {
+    max-width: 1200px;
+    padding: 0 1rem;
+  }
+  .tf3-hero-banner-img {
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 8px 32px #a084e8cc;
+  }
 }
 .tf3-hero-dates {
   font-size: 2.2rem;
@@ -38,15 +56,53 @@
   color: #a084e8;
 }
 
+/* New: Controlled hero crop with fixed aspect ratio and cover fit */
+.tf3-hero-banner {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: 0;           /* blend with page background */
+  overflow: hidden;
+  box-shadow: none;           /* remove "card" feeling */
+  background: transparent;
+  position: relative;
+}
+
+.tf3-hero-banner .tf3-hero-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%; /* crop away extra top space */
+}
+
+@media (max-width: 600px) {
+  .tf3-hero-banner {
+    aspect-ratio: 16 / 6;
+  }
+
+  .tf3-hero-banner .tf3-hero-banner-img {
+    object-position: center 70%;
+  }
+}
+
 /* --- Letters / Messages Section --- */
 .tf3-letters-section {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 1050px;
-  margin: 0 auto 3.5rem auto;
-  padding: 0 1rem;
+  margin: 0 auto 3rem auto;
+  padding: 0 0.75rem;
   z-index: 13;
+}
+
+@media (min-width: 768px) {
+  .tf3-letters-section {
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
 }
 
 .tf3-letter-card {
@@ -103,18 +159,24 @@
 }
 
 @media (max-width: 900px) {
+  .tf3-hero-banner {
+    aspect-ratio: 16 / 7;
+  }
+
   .tf3-letter-card {
-    display: flex;              /* ✅ IMPORTANT */
+    display: flex;
     flex-direction: column;
     min-height: unset;
   }
 
   .tf3-letter-img-wrap {
     width: 100%;
-    height: 260px;              /* ✅ CONTROL IMAGE SIZE */
+    height: 300px;
+    min-height: 300px;
     position: relative;
     border-radius: 1.5rem 1.5rem 0 0;
-    
+    overflow: hidden;
+    background: #1a1333;
   }
 
   .tf3-letter-img {
@@ -122,15 +184,13 @@
     inset: 0;
     width: 100%;
     height: 100%;
-   
-  object-fit: contain;
- 
-  object-position: center top;      /* ✅ keeps image proportional */
+    object-fit: cover;
+    object-position: center 25%;
   }
 
   .tf3-letter-content,
   .tf3-letter-content-centered {
-    padding: 1.5rem 1.2rem;
+    padding: 1.25rem 1rem;
     text-align: center;
     align-items: center;
   }
@@ -139,35 +199,61 @@
   .tf3-letter-text {
     text-align: center;
   }
-  
+
   .tf3-letter-text {
-    font-size: 0.9rem;
-    text-align: center;
-    max-height: 300px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-height: 40vh;
     overflow-y: auto;
   }
 }
 
 @media (max-width: 480px) {
+  .home-container { padding: 0; }
+  .tf3-letters-section { 
+    gap: 1.5rem; 
+    margin-bottom: 2rem; 
+    padding: 0 0.5rem;
+  }
+  
+  .tf3-letter-img-wrap {
+    height: 260px;
+    min-height: 260px;
+  }
+  
+  .tf3-letter-content {
+    padding: 1rem 0.85rem;
+  }
+  
+  .tf3-letter-heading {
+    font-size: 1.25rem;
+  }
+  
+  .tf3-letter-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .tf3-hero-banner-img {
+    max-height: 220px;
+  }
+  
   .tf3-letter-card {
     border-radius: 1rem;
   }
   
   .tf3-letter-img-wrap {
-    height: 200px;
-    min-height: 200px;
-  }
-  
-  .tf3-letter-content {
-    padding: 1.25rem 1rem;
+    height: 220px;
+    min-height: 220px;
   }
   
   .tf3-letter-heading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .tf3-letter-text {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.6;
   }
 }
@@ -276,59 +362,7 @@
     max-width: 320px;
   }
 }
-/* --- TechFusion 2.0 Banner Section --- */
-.tf-banner-section {
-  width: 100vw;
-  max-width: 100%;
-  margin: 0 auto 2.5rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 12;
-}
-.tf-banner-img {
-  width: 100vw;
-  max-width: 1600px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 0 0 2.5rem 2.5rem;
-  box-shadow: 0 8px 32px #a084e8cc;
-  margin-bottom: 0.5rem;
-}
-.tf-banner-dates {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: -1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  letter-spacing: 0.05em;
-}
-.tf-purple {
-  color: #a084e8;
-}
-
-/* --- Message Cards Section --- */
-.tf-message-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  max-width: 900px;
-  margin: 0 auto 3.5rem auto;
-  z-index: 13;
-}
-.tf-message-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: rgba(24, 18, 48, 0.95);
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 32px #a084e850;
-  overflow: hidden;
-  min-height: 220px;
-  transition: box-shadow 0.3s, transform 0.3s;
-  border: 1.5px solid #a084e830;
-}
+/* legacy banner section removed to prevent CSS corruption */
 .tf-message-card:hover {
   box-shadow: 0 8px 48px #a084e8cc, 0 0 0 2px #a084e8;
   transform: translateY(-6px) scale(1.02);
