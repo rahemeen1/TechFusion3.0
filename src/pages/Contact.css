@@ -1,25 +1,17 @@
 .contact-container {
   min-height: 100vh;
-  padding: 80px 2rem 40px;
+  padding: 8px 1rem 40px;
   position: relative;
   overflow: hidden;
-  /* background:
-    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
-    url('/images/backgrounds/starfield.png');
-  background-size: auto, cover;
-  background-attachment: fixed, fixed;
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-blend-mode: overlay, normal; */
 }
 
 .contact-header {
   max-width: 1200px;
-  margin: 3rem auto 3rem;
+  margin: 0.5rem auto 2.5rem;
   text-align: center;
   position: relative;
   z-index: 10;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .page-title {
@@ -39,10 +31,10 @@
 
 .contact-content {
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3rem;
   position: relative;
   z-index: 10;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .contact-two-column {
@@ -341,7 +333,11 @@
 
 @media (max-width: 768px) {
   .contact-container {
-    padding: 80px 1rem 40px;
+    padding: 8px 1rem 40px;
+  }
+
+  .contact-header {
+    margin: 0.5rem auto 2rem;
   }
 
   .page-title {
@@ -372,5 +368,9 @@
 
   .map-section iframe {
     height: 260px;
+  }
+
+  .contact-content {
+    padding: 0 0.75rem;
   }
 }

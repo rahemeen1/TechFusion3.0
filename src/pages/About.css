@@ -14,8 +14,8 @@
 
 .about-container {
   max-width: 1100px;
-  margin: 6rem auto 2rem auto;
-  padding: 2.5rem 1.5rem;
+  margin: 0 auto 2rem auto;
+  padding: 1rem 1.5rem 2.5rem;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -197,9 +197,17 @@
   transform: translateY(-2px) scale(1.04);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0.5rem 1rem 2rem;
+    gap: 1.5rem;
+  }
   .about-section {
-    padding: 1.2rem 0.7rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .about-heading {
+    font-size: 1.8rem;
   }
   .about-title {
     font-size: 1.5rem;
@@ -207,8 +215,12 @@
   .about-subheading {
     font-size: 1.3rem;
   }
+  .about-desc {
+    font-size: 1rem;
+  }
   .competitions-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .about-buttons {
     flex-direction: column;
