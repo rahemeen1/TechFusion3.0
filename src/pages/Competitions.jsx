@@ -69,7 +69,7 @@ const competitions = [
       phone: '0306-4427570',
       pic: raaniaImg,
       role: 'Competition Head, Designathon',
-      driveLink: 'https://drive.google.com/file/d/1i-iDZrJ_pugsGzSYB8DOL3gAOqgOE9tw/view',
+      driveLink: 'https://drive.google.com/file/d/1sHlaJSicMap69OFM9HKt7Y1tp4juqRT3/view?usp=drive_link',
     },
   },
   {
