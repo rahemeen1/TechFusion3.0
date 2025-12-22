@@ -176,9 +176,7 @@ function Competitions() {
         <p className="page-subtitle">
           Showcase your skills across diverse technical domains. Choose your
           challenge and compete with the brightest minds.
-          <br>
-          
-          </br>
+          <br />
           <b> <i>Registration Deadline: 18 January 2026</i> </b>
           
           
@@ -204,7 +202,7 @@ function Competitions() {
                 onMouseLeave={() => handleMouseLeave(competition.id)}
                 sx={{ position: 'relative',
     width: '100%',
-    height: 320,          // 🔴 ADD THIS
+    height: { xs: 300, sm: 320 },
     marginBottom: '2rem'   }}
               >
                 <motion.div

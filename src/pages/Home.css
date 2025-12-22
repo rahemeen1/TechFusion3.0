@@ -30,17 +30,19 @@
 
 @media (min-width: 600px) {
   .tf3-hero-banner-img {
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0;
   }
 }
 
 @media (min-width: 900px) {
   .tf3-hero-banner-section {
-    max-width: 1200px;
-    padding: 0 1rem;
+    /* Full width on desktop, no side constraints */
+    max-width: 100%;
+    padding: 0;
   }
   .tf3-hero-banner-img {
-    border-radius: 0 0 1.5rem 1.5rem;
+    /* Keep flat for full-bleed effect */
+    border-radius: 0;
     box-shadow: 0 8px 32px #a084e8cc;
   }
 }

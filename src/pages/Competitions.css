@@ -1,9 +1,10 @@
 .competitions-container {
   min-height: 100vh;
-  padding: 80px 2rem 200px;
+  /* Keep content close to navbar; main-content already offsets AppBar */
+  padding: 8px 1rem 120px;
   position: relative;
   overflow: visible;
-  margin-top: 60px;
+  margin-top: 0;
   /* background:
     linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1535 100%),
     url('/images/backgrounds/starfield.png');
@@ -40,11 +41,11 @@
 
 .competitions-header {
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
   text-align: center;
   position: relative;
   z-index: 10;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .page-title {
@@ -70,15 +71,14 @@
 
 .competitions-grid {
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3rem;
   display: grid;
-  gap: 3.5rem 2rem; 
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
-  row-gap: 10rem;
+  row-gap: clamp(1.5rem, 4vw, 3rem);
   position: relative;
   z-index: 10;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .competition-card {
@@ -209,11 +209,12 @@
 
 @media (max-width: 768px) {
   .competitions-container {
-    padding: 80px 1rem 40px;
+    padding: 8px 1rem 40px;
   }
 
   .competitions-grid {
     grid-template-columns: 1fr;
+    row-gap: clamp(1.25rem, 5vw, 2rem);
   }
 
   .guidelines-section {
