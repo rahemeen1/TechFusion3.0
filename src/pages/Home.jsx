@@ -7,6 +7,10 @@ import rahemeenImg from '../assets/rahemeen.jpeg';
 import drsidraImg from '../assets/drsidra.jpeg';
  import msidaImg from '../assets/msida.jpg.jpeg';
  import msghousiaImg from '../assets/msghousia.jpeg';
+ import newmsridaImg from '../assets/newmsrida.jpeg';
+ import msrridanewImg from '../assets/msrridanew.jpeg';
+ 
+
 
 
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -98,16 +102,20 @@ Kinnaird College for Women `
                   Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
           },
           {
-            img: msidaImg,
+            img: msrridanewImg,
             heading: 'Letter from IEEE Advisor',
-            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
+            text: ` On behalf of the IEEE Kinnaird Student Branch, I am delighted to bring to youTechFusion 3.0, our flagship two-day technical event scheduled for 21st–22nd January 2026 at Kinnaird College for Women, Lahore. 
+            
+            TechFusion 3.0 represents IEEE’s commitment to cultivating technical excellence, innovation, and leadership among students. This event brings together technology, creativity, and strategic thinking through hands-on competitions, workshops, expert talks, and collaborative challenges designed to prepare participants for emerging and high-impact domains.
+            
+            While rooted in empowering women in technology, TechFusion 3.0 also embraces inclusion and inter-university collaboration, providing a platform where diverse ideas converge to shape forward-looking solutions. The dedication and vision of our student organizers reflect the true spirit of IEEE—learning by doing, leading by serving, and innovating with purpose.
+            
+  I encourage all participants to seize this opportunity to showcase their skills, expand their perspectives, and engage with a vibrant community of future technologists. 
+  
+  See you all there,
+   Rida Hijab Basit
+IEEE Kinnaird Student Branch Counselor
+Computer Science Department`
           },
         ].map((card, idx) => (
           <motion.div
