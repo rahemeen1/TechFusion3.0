@@ -92,14 +92,23 @@ Kinnaird College for Women `
           {
             img: msghousiaImg,
             heading: 'Letter from CS Club Advisor',
-            text: `Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.
-                  Welcome to TechFusion 3.0! We are proud to host this event that celebrates innovation and collaboration. Join us for an unforgettable experience.
-                  Thank you for being a part of TechFusion 3.0. Together, we are shaping the future of technology and empowering the next generation of innovators.`
+            text: `Dear Participants,
+
+            We are delighted to welcome you to TechFusion, an exciting intra-university event organized by the Department of Computer Science, Kinnarid College for Women, where innovation, creativity, and technical excellence come together on one dynamic platform.
+
+Kinnaird College is proud of its supportive and encouraging academic environment, committed to empowering women by providing opportunities that foster confidence, leadership, and excellence in technology and innovation. TechFusion reflects this vision by creating a platform where students are encouraged to explore, compete, and grow.
+
+TechFusion offers a diverse range of competitions designed to challenge and inspire you. These include Flash Coding, Gaming competition, Designathon, and Cybersecurity competitions, along with many other engaging activities. Each competition aims to strengthen problem-solving skills, creativity, and practical understanding, while building a strong edge between academia and real-world applications.
+
+This event is not only about competition, but also about learning, collaboration, and exploring new ideas. It provides an excellent opportunity for students to apply academic knowledge, showcase talent, and engage in healthy competition within the university.
+
+We are thrilled to have you with us and wish you the very best of luck in all the competitions. May TechFusion be a memorable and rewarding experience for you.
+
+Welcome to TechFusion — let the innovation begin!
+
+Warm regards,
+Dr. Ghousia Usman
+Advisor, Kinnaird Computer Science Club`
           },
           {
             img: msrridanewImg,
