@@ -113,7 +113,7 @@ Advisor, Kinnaird Computer Science Club`
           {
             img: msrridanewImg,
             heading: 'Letter from IEEE Advisor',
-            text: ` On behalf of the IEEE Kinnaird Student Branch, I am delighted to bring to youTechFusion 3.0, our flagship two-day technical event scheduled for 21st–22nd January 2026 at Kinnaird College for Women, Lahore. 
+            text: ` On behalf of the IEEE Kinnaird Student Branch, I am delighted to bring to you TechFusion 3.0, our flagship two-day technical event scheduled for 21st–22nd January 2026 at Kinnaird College for Women, Lahore. 
             
             TechFusion 3.0 represents IEEE’s commitment to cultivating technical excellence, innovation, and leadership among students. This event brings together technology, creativity, and strategic thinking through hands-on competitions, workshops, expert talks, and collaborative challenges designed to prepare participants for emerging and high-impact domains.
             
