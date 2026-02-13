@@ -15,6 +15,22 @@
   position: relative;
   z-index: 12;
   padding: 0;
+  background: #a084e8 !important; /* Force purple background */
+  background-image: url('/images/backgrounds/starfield.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+@media (max-width: 600px) {
+  .tf3-hero-banner-section {
+    margin-bottom: 1.25rem;
+    background: #a084e8 !important;
+    background-image: url('/images/backgrounds/starfield.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -56,6 +72,7 @@
 }
 .tf3-purple {
   color: #a084e8;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
 }
 
 /* New: Controlled hero crop with fixed aspect ratio and cover fit */
@@ -63,11 +80,18 @@
   width: 100%;
   max-width: 100%;
   aspect-ratio: 16 / 7;
-  border-radius: 0;           /* blend with page background */
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: none;           /* remove "card" feeling */
+  box-shadow: none;
   background: transparent;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .tf3-hero-banner {
+    aspect-ratio: auto;
+    height: clamp(240px, 65vw, 460px);
+  }
 }
 
 .tf3-hero-banner .tf3-hero-banner-img {
@@ -76,7 +100,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%; /* crop away extra top space */
+  object-position: center 35%;
+}
+
+@media (max-width: 600px) {
+  .tf3-hero-banner .tf3-hero-banner-img {
+    object-position: center 60%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -95,11 +125,19 @@
 .tf3-letters-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
   max-width: 1050px;
-  margin: 0 auto 3rem auto;
-  padding: 0 0.75rem;
+  margin: 0 auto 2rem auto;
+  padding: 0 0.5rem;
   z-index: 13;
+}
+
+@media (max-width: 600px) {
+  .tf3-letters-section {
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    padding: 0 0.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -147,19 +185,35 @@
   overflow-y: auto;
 }
 .tf3-letter-heading {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: left;
   color: #a084e8;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .tf3-letter-heading {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
 }
 .tf3-letter-text {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #c7bfff;
   text-align: left;
-  line-height: 1.7;
+  line-height: 1.6;
   word-break: break-word;
-   white-space:  pre-line;
+  white-space: pre-line;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .tf3-letter-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 900px) {
@@ -270,10 +324,18 @@
   z-index: 14;
 }
 .tf3-team-title {
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   font-weight: 800;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
   letter-spacing: 0.04em;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .tf3-team-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
 }
 
 .tf3-team-cards {
@@ -286,11 +348,23 @@
 }
 /* Flip Card Styles */
 .tf3-flip-card {
-  width: clamp(240px, 24vw, 300px);
-  height: clamp(320px, 32vw, 380px);
+  width: 100%;
+  max-width: 320px;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 4/5;
   perspective: 1000px;
   border-radius: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .tf3-flip-card {
+    max-width: 100%;
+    aspect-ratio: 4/5;
+    /* Disable animation on mobile */
+    transition: none;
+  }
 }
 
 .tf3-flip-inner {
@@ -299,6 +373,12 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.7s ease;
+}
+@media (max-width: 600px) {
+  .tf3-flip-inner {
+    /* Disable animation on mobile */
+    transition: none;
+  }
 }
 
 .tf3-flip-card:hover .tf3-flip-inner,
@@ -426,7 +506,7 @@
 
 /* --- Team Section --- */
 .tf-team-section {
-  margin: 4rem auto 2rem auto;
+  margin: 2rem auto 1rem auto;
   max-width: 1100px;
   text-align: center;
   z-index: 14;
@@ -440,9 +520,18 @@
 .tf-team-cards {
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .tf3-team-cards {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
 .tf-team-card {
   background: rgba(24, 18, 48, 0.97);

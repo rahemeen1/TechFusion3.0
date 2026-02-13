@@ -115,6 +115,7 @@ export default function About() {
 
       {/* Buttons Section */}
       <div className="about-buttons">
+        {/*
         <Button
           variant="contained"
           color="secondary"
@@ -125,6 +126,7 @@ export default function About() {
         >
           Register Now
         </Button>
+        */}
         <Button
           variant="outlined"
           color="secondary"

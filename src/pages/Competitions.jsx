@@ -33,7 +33,7 @@ const competitions = [
     logo: flashCodingImg,
     team: 'Individuals or teams (max 3)',
     fee: 'Rs. 2000/- per team',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLScHlZooudoewj1AgpVMDjWeGG3-NVjSIz3wsfIH_7cJ5OT8Mg/viewform?usp=header',
+    // registerLink removed for post-event
     head: {
       name: 'Roshni Fareed',
       phone: '0323-2545157',
@@ -48,7 +48,7 @@ const competitions = [
     logo:sheImg,
     team: 'Individual',
     fee: 'PKR 500 per participant',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdmJS_fb8OT_CCDcYYw7VcJYfyzg95lRa7IspH6GeDylUfoew/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Alishba Fatima',
       phone: '0310-4736985',
@@ -63,7 +63,7 @@ const competitions = [
     logo: designathonImg,
     team: '2 participants per team',
     fee: 'PKR 1500 per team',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSezsiZsk9PFysQhJFK33BI99mZWuK7ld-7tOPH0ukWVISyjtA/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Sania Shaukat',
       phone: '0306-4427570',
@@ -78,7 +78,7 @@ const competitions = [
     logo: ideaPitchImg,
     team: 'Individual or max 3 participants',
     fee: 'PKR 500 per team',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSceJGWz7l3aDx7Ew73ob2_T4yNjYo7WDuaWCXZFPRSh3BA2nA/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Mareeha',
       phone: '0331-6706274',
@@ -93,7 +93,7 @@ const competitions = [
     logo: posterImg,
     team: '2 to 3 members per team',
     fee: 'PKR 400 per team (PKR 300 for KCSC members)',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf8qPJWIqHxnTbMTaXOZ-VdhA35AF44iU0bypO-G4O1dPMRTw/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Mubashra Noor',
       phone: '0322-4252786',
@@ -108,7 +108,7 @@ const competitions = [
     logo: cybersecurityImg,
     team: 'Individual',
     fee: 'PKR 500 per participant',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdOKd13gIuP8V52D0jQ3QkinhikzIqf6WAno4DoKGllEqVbnw/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Hifza Qadeer',
       phone: '0317-4813335',
@@ -123,7 +123,7 @@ const competitions = [
     logo: scavengerImg,
     team: '2-3 participants per team',
     fee: 'PKR 500 per team',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSe4jOegQDkZGg8Sau7UL29oaehAyuD6dhl6Z2XhFGl8OQCLDg/viewform',
+    // registerLink removed for post-event
     head: {
       name: 'Alishba Nadeem',
       phone: '0301-4589415',
@@ -138,7 +138,7 @@ const competitions = [
     logo: escapeRoomImg,
     team: 'Individual members',
     fee: 'PKR 500 per participant',
-    registerLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfdxdJQGv9RBFvURhhrB7C_7-3VdGJeJZJyAQAnswh88EJw6g/viewform',
+    // registerLink removed for post-event
     head: {
       name: ['Kohinoor', 'Mubashara'],
       phone: ['0331-4396900', '0309-5216393'],
@@ -149,19 +149,19 @@ const competitions = [
 ]
 
 function Competitions() {
-  const [flippedCards, setFlippedCards] = useState({})
+  // const [flippedCards, setFlippedCards] = useState({})
 
-  const handleFlip = (id, state) => {
-    setFlippedCards(prev => ({ ...prev, [id]: state ?? !prev[id] }))
-  }
+  // const handleFlip = (id, state) => {
+  //   setFlippedCards(prev => ({ ...prev, [id]: state ?? !prev[id] }))
+  // }
 
-  const handleMouseEnter = (id) => {
-    setFlippedCards(prev => ({ ...prev, [id]: true }))
-  }
+  // const handleMouseEnter = (id) => {
+  //   setFlippedCards(prev => ({ ...prev, [id]: true }))
+  // }
 
-  const handleMouseLeave = (id) => {
-    setFlippedCards(prev => ({ ...prev, [id]: false }))
-  }
+  // const handleMouseLeave = (id) => {
+  //   setFlippedCards(prev => ({ ...prev, [id]: false }))
+  // }
 
   return (
     <div className="competitions-container">
@@ -177,7 +177,7 @@ function Competitions() {
           Showcase your skills across diverse technical domains. Choose your
           challenge and compete with the brightest minds.
           <br />
-          <b> <i>Registration Deadline: 18 January 2026</i> </b>
+          {/* Registration closed for post-event version */}
           
           
         </p>
@@ -185,9 +185,9 @@ function Competitions() {
       </motion.div>
 
       {/* Competitions Grid */}
-      <div className="competitions-grid" style={{ marginTop:40, marginBottom: 100 }}>
+      <div className="competitions-grid" style={{ marginTop:80, marginBottom: 32 }}>
         {competitions.map((competition, index) => {
-          const isFlipped = flippedCards[competition.id]
+          // const isFlipped = flippedCards[competition.id]
           return (
             <motion.div
               key={competition.id}
@@ -198,35 +198,34 @@ function Competitions() {
               style={{ perspective: 1000 }}
             >
               <Box
-                onMouseEnter={() => handleMouseEnter(competition.id)}
-                onMouseLeave={() => handleMouseLeave(competition.id)}
-                sx={{ position: 'relative',
-    width: '100%',
-    height: { xs: 300, sm: 320 },
-    marginBottom: '2rem'   }}
+                // onMouseEnter={() => handleMouseEnter(competition.id)}
+                // onMouseLeave={() => handleMouseLeave(competition.id)}
+                sx={{ position: 'relative', width: '100%', height: { xs: 300, sm: 320 } }}
               >
                 <motion.div
-                  animate={{ rotateY: isFlipped ? 180 : 0 }}
-                  transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
+                  // animate={{ rotateY: isFlipped ? 180 : 0 }}
+                  // transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
                   style={{
                     position: 'relative',
                     width: '100%',
                     height: '100%',
-                    transformStyle: 'preserve-3d',
+                    // transformStyle: 'preserve-3d',
                   }}
                 >
                   {/* Front of Card */}
                   <Card
                     className="competition-card glass-effect"
                     sx={{
-                      position: isFlipped ? 'absolute' : 'relative',
-                      zIndex: isFlipped ? 1 : 2,
+                      // position: isFlipped ? 'absolute' : 'relative',
+                      // zIndex: isFlipped ? 1 : 2,
+                      position: 'relative',
+                      zIndex: 2,
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
-                      backfaceVisibility: 'hidden',
-                      transform: 'rotateY(0deg)',
+                      // backfaceVisibility: 'hidden',
+                      // transform: 'rotateY(0deg)',
                       borderRadius: 3,
                       overflow: 'hidden',
                       border: '2px solid rgba(139, 92, 246, 0.6)',
@@ -245,153 +244,35 @@ function Competitions() {
                       {competition.title}
                     </Typography>
                   </Card>
-                    <Card
-                      className="competition-card glass-effect"
-                      sx={{
-                        position: isFlipped ? 'relative' : 'absolute',
-                        zIndex: isFlipped ? 2 : 1,
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)',
-                        borderRadius: 3,
-                        overflow: 'hidden',
-                        border: '2px solid rgba(139, 92, 246, 0.6)',
-                        background: 'linear-gradient(135deg, rgba(14, 21, 45, 0.95) 0%, rgba(20, 30, 60, 0.95) 100%)',
-                        backdropFilter: 'blur(14px)',
-                        boxShadow: '0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1)',
-                      }}
-                    >
-                      <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3, justifyContent: 'center', alignItems: 'center', gap: 2 }}>
-                        {/* Head Image(s) and Name(s) */}
-                        {Array.isArray(competition.head.pic) ? (
-                          competition.head.pic.map((pic, idx) => (
-                            <Box key={idx} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mx: 1 }}>
-                              <Box sx={{ position: 'relative', display: 'inline-block' }}>
-                                <Box sx={{
-                                  position: 'absolute',
-                                  inset: -6,
-                                  background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
-                                  borderRadius: '50%',
-                                  filter: 'blur(8px)',
-                                  opacity: 0.6,
-                                }} />
-                                <img
-                                  src={pic}
-                                  alt={competition.head.name[idx]}
-                                  style={{
-                                    width: 80,
-                                    height: 80,
-                                    borderRadius: '50%',
-                                    objectFit: 'contain',
-                                    border: '3px solid rgba(139, 92, 246, 0.8)',
-                                    position: 'relative',
-                                    zIndex: 1,
-                                    backgroundColor: 'rgba(14, 21, 45, 0.8)'
-                                  }}
-                                />
-                              </Box>
-                              <Typography variant="h6" sx={{ fontWeight: 600, color: '#fff', textAlign: 'center', fontSize: '0.85rem', mt: 1 }}>
-                                {competition.head.name[idx]}
-                              </Typography>
-                              <Typography sx={{ color: '#06b6d4', fontWeight: 700, fontSize: '1.05rem', mt: 0.5 }}>
-                                {competition.head.phone[idx]}
-                              </Typography>
-                            </Box>
-                          ))
-                        ) : (
-                          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Box sx={{ position: 'relative', display: 'inline-block' }}>
-                              <Box sx={{
-                                position: 'absolute',
-                                inset: -6,
-                                background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
-                                borderRadius: '50%',
-                                filter: 'blur(8px)',
-                                opacity: 0.6,
-                              }} />
-                              <img
-                                src={competition.head.pic}
-                                alt={competition.head.name}
-                                style={{
-                                  width: 120,
-                                  height: 120,
-                                  borderRadius: '50%',
-                                  objectFit: 'contain',
-                                  border: '3px solid rgba(139, 92, 246, 0.8)',
-                                  position: 'relative',
-                                  zIndex: 1,
-                                  backgroundColor: 'rgba(14, 21, 45, 0.8)'
-                                }}
-                              />
-                            </Box>
-                            <Typography variant="h6" sx={{ fontWeight: 800, color: '#fff', textAlign: 'center', fontSize: '1.1rem', mt: 1 }}>
-                              {competition.head.name}
-                            </Typography>
-                            <Typography sx={{ color: '#06b6d4', fontWeight: 700, fontSize: '1.05rem', mt: 0.5 }}>
-                              {competition.head.phone}
-                            </Typography>
-                          </Box>
-                        )}
-                      </CardContent>
-                        </Card>
+                  {/* Back side card and content commented out for disabling flip and hiding name/phone */}
               </motion.div>
               </Box>
 
-              {/* Buttons below card */}
-              <Stack direction="row" spacing={1.2} sx={{ mt: 2.5, mb: 6, width: '100%' }}>
+              {/*
+              <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 2 }}>
                 <Button
-                  fullWidth
-                  href={competition.registerLink || '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   variant="contained"
-                  sx={{
-                    borderRadius: 2,
-                    textTransform: 'none',
-                    fontWeight: 700,
-                    background: 'linear-gradient(135deg, #06b6d4, #8b5cf6)',
-                    boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
-                    pointerEvents: 'auto',
-                    cursor: 'pointer',
-                    '&:hover': {
-                      background: 'linear-gradient(135deg, #0ea5e9, #7c3aed)',
-                      boxShadow: '0 0 20px rgba(139, 92, 246, 0.4)',
-                    },
-                  }}
+                  color="secondary"
+                  sx={{ borderRadius: '2rem', px: 3, fontWeight: 700, fontSize: '1rem', background: 'linear-gradient(90deg,#a084e8,#6f4bb1)' }}
+                  href={competition.registerLink}
+                  target="_blank"
+                  rel="noopener"
+                  disabled={!competition.registerLink}
                 >
                   Register
                 </Button>
                 <Button
-                  fullWidth
-                  href={competition.head.driveLink || '#'}
+                  variant="outlined"
+                  color="secondary"
+                  sx={{ borderRadius: '2rem', px: 3, fontWeight: 700, fontSize: '1rem', border: '2px solid #a084e8', color: '#a084e8' }}
+                  href={competition.head.driveLink}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  variant="contained"
-                  startIcon={<span style={{fontSize:'1.2em'}}>📄</span>}
-                  sx={{
-                    borderRadius: 2,
-                    textTransform: 'none',
-                    fontWeight: 800,
-                    fontSize: '1.08rem',
-                    background: 'linear-gradient(90deg, #8b5cf6 60%, #06b6d4 100%)',
-                    color: '#fff',
-                    boxShadow: '0 0 18px 2px #8b5cf6',
-                    pointerEvents: 'auto',
-                    cursor: competition.head.driveLink ? 'pointer' : 'not-allowed',
-                    opacity: competition.head.driveLink ? 1 : 0.7,
-                    '&:hover': {
-                      background: 'linear-gradient(90deg, #a78bfa 60%, #06b6d4 100%)',
-                      color: '#fff',
-                      boxShadow: '0 0 28px 4px #8b5cf6',
-                    },
-                  }}
+                  rel="noopener"
                 >
                   Details
                 </Button>
               </Stack>
+              */}
             </motion.div>
           )
         })}

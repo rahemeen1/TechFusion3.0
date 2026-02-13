@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Button from '@mui/material/Button';
+import CelebrationIcon from '@mui/icons-material/Celebration';
+// Post-event popup modal logic
+const POST_EVENT_MODAL_KEY = 'tf3_post_event_modal_dismissed';
 import techfusionBanner from '../assets/TechFusion Banner.png';
 import alishbaImg from '../assets/alishba.jpeg';
 import drghousiaImg from '../assets/drghousia.jpeg';
@@ -18,7 +25,29 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
+
 function Home() {
+    const [openModal, setOpenModal] = useState(false);
+
+    useEffect(() => {
+      // Only run on the actual landing page and only once per session
+      if (window.location.pathname === "/" && !sessionStorage.getItem("popupShown")) {
+        setOpenModal(true);
+        sessionStorage.setItem("popupShown", "true");
+      }
+      // Reset popupShown when user leaves the site (not just internal navigation)
+      const resetPopupFlag = () => {
+        sessionStorage.removeItem("popupShown");
+      };
+      window.addEventListener('beforeunload', resetPopupFlag);
+      return () => {
+        window.removeEventListener('beforeunload', resetPopupFlag);
+      };
+    }, []);
+
+    const handleCloseModal = () => {
+      setOpenModal(false);
+    };
   const [stars, setStars] = useState([])
   const { scrollY } = useScroll()
   const robotY = useTransform(scrollY, [0, 500], [0, 150])
@@ -54,6 +83,45 @@ function Home() {
 
   return (
     <>
+      {/* POST-EVENT POPUP MODAL */}
+      <Dialog
+        open={openModal}
+        onClose={handleCloseModal}
+        PaperProps={{
+          sx: {
+            borderRadius: 6,
+            boxShadow: 12,
+            background: 'linear-gradient(135deg, #1e193a 80%, #8b5cf6 100%)',
+            color: '#fff',
+            minWidth: { xs: 320, sm: 400 },
+            p: 2,
+            overflow: 'visible',
+          },
+        }}
+      >
+        <DialogContent sx={{ textAlign: 'center', py: 5, px: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+          <CelebrationIcon sx={{ fontSize: 64, color: 'linear-gradient(90deg, #06b6d4, #8b5cf6)', mb: 1, filter: 'drop-shadow(0 0 12px #8b5cf6)' }} />
+          <span style={{
+            fontWeight: 900,
+            fontSize: '2.3rem',
+            background: 'linear-gradient(90deg, #06b6d4, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textFillColor: 'transparent',
+            letterSpacing: 1.5,
+            marginBottom: 8,
+            display: 'block',
+          }}>
+            See you next year!
+          </span>
+        </DialogContent>
+        <DialogActions sx={{ justifyContent: 'center', pb: 2 }}>
+          <Button onClick={handleCloseModal} variant="contained" sx={{ borderRadius: 3, background: 'linear-gradient(90deg, #06b6d4, #8b5cf6)', color: '#fff', fontWeight: 700, px: 5, py: 1.2, fontSize: '1.15rem', boxShadow: 4, '&:hover': { background: 'linear-gradient(90deg, #0ea5e9, #7c3aed)' } }}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
       {/* SECTION 0: HERO BANNER */}
       <div className="tf3-hero-banner-section">
         <div className="tf3-hero-banner">
@@ -113,7 +181,7 @@ Advisor, Kinnaird Computer Science Club`
           {
             img: msrridanewImg,
             heading: 'Letter from IEEE Advisor',
-            text: ` On behalf of the IEEE Kinnaird Student Branch, I am delighted to bring to youTechFusion 3.0, our flagship two-day technical event scheduled for 21st–22nd January 2026 at Kinnaird College for Women, Lahore. 
+            text: ` On behalf of the IEEE Kinnaird Student Branch, I am delighted to bring to you TechFusion 3.0, our flagship two-day technical event scheduled for 21st–22nd January 2026 at Kinnaird College for Women, Lahore. 
             
             TechFusion 3.0 represents IEEE’s commitment to cultivating technical excellence, innovation, and leadership among students. This event brings together technology, creativity, and strategic thinking through hands-on competitions, workshops, expert talks, and collaborative challenges designed to prepare participants for emerging and high-impact domains.
             
@@ -210,6 +278,7 @@ Computer Science Department`
           ))}
         </div>
       </div>
+      {/* ...existing code... */}
     </>
   )
 }

@@ -15,10 +15,12 @@ import MenuIcon from '@mui/icons-material/Menu'
 
 import './Navigation.css'
 
+// Registration nav removed for post-event version
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Competitions', href: '/competitions' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '/contact' },
 ]
 
